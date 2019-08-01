@@ -17,10 +17,11 @@ function closeModal(){
 }
 
 buttonShow.addEventListener('click', function(){
-  modal.classList.add('show');
-  backdrop.classList.add('show');
+    backdrop.classList.add('show');
+    modal.classList.add('show');
+    
+    backdrop.addEventListener('click', closeModal);
   
-  backdrop.addEventListener('click', closeModal);
-  
-  modal.addEventListener('click', closeModal);
+    buttonClose.addEventListener('click', closeModal);
 });
+
